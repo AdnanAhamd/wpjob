@@ -1,0 +1,44 @@
+.bannerSection .floatingImg.img01 {
+    background-image: url('../../../../uploads/2024/04/img018.svg');
+}
+
+.bannerSection .floatingImg.img02 {
+    background-image: url('../../../../uploads/2024/04/img019.svg');
+}
+
+.bannerSection .floatingImg.img03 {
+    background-image: url('../../../../uploads/2024/04/img020.svg');
+}
+
+.bannerSection .floatingImg.img04 {
+    background-image: url('../../../../uploads/2024/04/img021.svg');
+}
+
+.pricingSection:after {
+    background-image: url('../../../../uploads/2024/04/bgGradient.png');
+}
+
+.planCard .plnCrdHead:before,
+.planCard[data-type="onboarding"] .plnCrdBody:before,
+.collapseWrap:after,
+.menuDropdown:before,
+.pageHeader::before,
+.bgImgTexture {
+    background-image: url('../../../../uploads/2024/04/bgTexture.png');
+}
+
+@media (min-width: 992px) {
+    .stopLeavingActual:before,
+    .ctaBtnSection:before {
+        background-image: url('../../../../uploads/2024/04/img13.png');
+    }
+
+    .stopLeavingActual:after,
+    .ctaBtnSection:after {
+        background-image: url('../../../../uploads/2024/04/img14.png');
+    }
+
+    .dediToConnectSection .imgWrap::before {
+        background-image: url('../../../../uploads/2024/04/bgGradient01.png');
+    }
+}

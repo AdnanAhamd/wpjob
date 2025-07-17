@@ -1,0 +1,2042 @@
+/*!
+Theme Name: Recruitment
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: recruitment
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Recruitment is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+ body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.section-two-header{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 350px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.social-icons img {
+  width: 45px;
+  margin-right: 5px;
+}
+
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+
+.logo-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.logo-bar .logo-text h2 {
+  color: #f7931e;
+  margin: 0;
+}
+
+.right-box {
+  text-align: right;
+  font-size: 14px;
+}
+
+.menu {
+  background: #0062cc;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+.social-icons-img {
+    width: 340px;
+}
+
+.menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  border-right: 1px solid #ccc;
+}
+
+.menu a:last-child {
+  border-right: none;
+}
+ .job-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+
+} 
+
+.page-banner{
+	width: 100%;
+}
+
+.job-category h3,.page-banner h3 {
+  background: orange;
+  color: white;
+  padding: 10px;
+  margin: 20px 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.main-banner{
+   width: 100%;
+}
+.inner-main-banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.inner-main-banner-img {
+    height: 220px;
+}
+.job-category-content{
+    width: 80%;
+    margin: auto;
+}
+marquee a{
+    padding: 15px 0px;
+    color: black;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+marquee {
+    padding: 15px 0px;
+
+}
+
+.ad-box {
+  float: left;
+  width: 120px;
+  height: 100px;
+  background: #f4a460;
+  color: #000;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.job-banner img {
+  width: 100%!important;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.green-text {
+  color: green;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.job-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.job-buttons button {
+  padding: 10px;
+  background: #ffe4b5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.job-buttons button:hover {
+  background: #ffd799;
+}
+
+.job-ads {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.job-ads img {
+  max-width: 430px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slideshow-container {
+  width: 600px;
+  height: 300px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* optional */
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* Stretch and crop image like background-size: cover */
+  object-position: center; /* Align center center */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  border: none;
+  background: none;
+  z-index: 2;
+}
+
+.prev img, .next img {
+  width: 40px;
+  height: auto;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.prev img:hover, .next img:hover {
+  opacity: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}
+
+.employer-container {
+  border: 1px solid #f5e8e8;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.employer-link {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.employer-form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.employer-label {
+  width: 80px;
+  text-align: right;
+}
+
+.employer-input {
+  width: 250px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.employer-button {
+  background-color: #ffc562;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.employer-link-group {
+  margin-top: 10px;
+}
+
+.employer-link-group a {
+  margin: 0 10px;
+  color: blue;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.employer-registration {
+  margin-top: 25px;
+  display: block;
+  color: blue;
+  text-decoration: none;
+  font-size: 15px;
+}
+.gulf-title {
+  background: #fdbd5b;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: white;
+  margin-top: 10px;
+}
+ .about-us-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  gap: 50px;
+}
+
+.about-image img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.about-details {
+  text-align: center;
+  max-width: 300px;
+}
+
+.about-details img {
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.about-details .highlight {
+  color: #f4a623;
+  font-weight: bold;
+  margin: 8px 0;
+  display: block;
+}
+
+.about-details a {
+  color: #0000ee;
+  text-decoration: underline;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Top Header Bar */
+.about-header {
+  background-color: #fdbd5b;
+  padding: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.about-header h2{
+  font-size: 18px;
+  color: #fff;
+  line-height: 0;
+}
+.about-header a {
+  text-decoration: none;
+  background-color: #fdbd5b;
+  padding: 5px 14px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #cacaca;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Main Section */
+.about-us-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  gap: 50px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.about-details {
+  text-align: center;
+  max-width: 300px;
+}
+
+.about-details img {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.about-details .highlight {
+  color: #f4a623;
+  font-weight: bold;
+  margin: 8px 0;
+  display: block;
+}
+
+.about-details a {
+  color: #0000ee;
+  text-decoration: underline;
+  display: block;
+  margin-top: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body.gulf-body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+}
+header.gulf-header {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.gulf-top-bar {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.gulf-top-icons img {
+  width: 24px;
+  margin-right: 8px;
+}
+nav.gulf-nav {
+  background: #fdbd5b;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+nav.gulf-nav a {
+  margin: 5px 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+.gulf-lang-select {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+.gulf-container {
+  padding: 20px;
+}
+.gulf-title {
+  background: #fdbd5b;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: white;
+  margin-top: 10px;
+}
+.gulf-buttons,
+.gulf-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.gulf-buttons button,
+.gulf-filters button {
+  background: #f9d8a6;
+  border: 1px solid #f28035;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.gulf-job-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+table.gulf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+table.gulf-table th, table.gulf-table td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: center;
+}
+table.gulf-table th {
+  background: #d0a469;
+  color: white;
+}
+table.gulf-table td {
+  background: #e9fff4;
+}
+.gulf-job-section h3 {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.categoryWrapper{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.employer-container {
+  border: 1px solid #f5e8e8;
+  padding: 30px;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.employer-form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.employer-label {
+  width: 80px;
+  text-align: right;
+}
+
+.employer-input {
+  width: 250px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.employer-button {
+  background-color: #ffc562;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.employer-link-group {
+  margin-top: 10px;
+}
+
+.employer-link-group a {
+  margin: 0 10px;
+  color: blue;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.employer-registration {
+  margin-top: 25px;
+  display: block;
+  color: blue;
+  text-decoration: none;
+  font-size: 15px;
+}
+.gulf-title {
+  background: #fdbd5b;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  color: white;
+  margin-top: 10px;
+}
+
+.linkStyle{
+	text-decoration: none;
+}
+
+/* single job	*/
+.singleJobMainWrapper{
+	height: 600px;
+}
+.singleJobWrapper{
+	display: flex;
+    flex-direction: column;
+    gap: 25px;
+	width: 70%;
+	color: #808000;
+	border: 1px solid #000;
+	margin: 20px auto;
+	border-radius: 5px;
+	padding: 50px 5px;
+	box-shadow: 0 0 10px #ccc;
+	position: relative;
+}
+.jobItem{
+	display: flex;
+	gap: 20px;
+	font-weight: bold;
+}
+.jobItem p{
+	font-weight: normal;
+}
+.openText{
+	position: absolute;
+    right: 0;
+    top: 0;
+    color: red;
+    font-weight: bold;
+}
+.applyLink{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.applyLink a{
+	text-decoration: underline;
+	color: #CC6600;
+}
+.homeCategoryButton button{
+	width: 100%;
+}
+
+.userInformationBreadCrumb{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 18px;
+}
+.userInformationBreadCrumb a h2{
+	font-size: 18px;
+}
+.userProfileName{
+	margin-top: 10px;
+}
+
+
+/* start the css for dashboard */
+
+.dashboard {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.dashboard-title {
+  background-color: #ffb700;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px 10px 0 0;
+  font-size: 24px;
+  margin: 10px 0px;
+}
+
+.section {
+  background: #f7f3ed;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #e4d7c7;
+}
+
+.section-title {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.section-title.green {
+  color: #009900;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #a88d68;
+  padding: 8px;
+  text-align: center;
+}
+
+.data-table thead {
+  background-color: #f4c57b;
+  color: black;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #e0f7fa;
+}
+
+.data-table tbody tr:nth-child(odd) {
+  background-color: #fff7d0;
+}
+
+/* end the css for dashboard */
+
+
+/* add css dashboard-user */
+
+.container3 {
+  max-width: 900px;
+  margin: auto;
+}
+
+.header3 {
+  background-color: #fdb94c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px 10px 0 0;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.form-box3 {
+  background: #fcecd7;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.form-grid3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group3 {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group3 label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.radio-group3 {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.button-group3 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn3 {
+  background-color: #fdb94c;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn3:hover {
+  background-color: #e9a233;
+}
+
+.user-details3 {
+  margin-top: 30px;
+}
+
+.green-text3 {
+  color: green;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #a98550;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+thead {
+  background-color: #cba76f;
+  color: black;
+}
+
+.form-grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    gap: 20px;
+    margin: 20px;
+}
+
+.form-group3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-group3 {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+#selectUser {
+    width: 100%;
+    padding: 8px;
+}
+
+.form-group3 label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-group3 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn3 {
+    background-color: #f9b233;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn3:hover {
+    background-color: #e69a00;
+}
+
+/* end the css dashboard-user */
+
+/* start the css dashboard-majors */
+
+
+.container-majors-add {
+  max-width: 1000px;
+  margin: 10px auto;
+  background-color: #fbe9db;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.header-majors-add {
+  background-color: #fbb03b;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+.form-section-majors-add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.form-group-majors-add {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-majors-add label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group-majors-add select,
+.form-group-majors-add input {
+  padding: 6px;
+  font-size: 14px;
+}
+
+.buttons-majors-add {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-add-majors-add,
+.btn-delete-majors-add,
+.btn-clear-majors-add {
+  padding: 10px 16px;
+  font-size: 14px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #fbb03b;
+  color: white;
+}
+
+.major-details-majors-add h3 a {
+  color: green;
+  text-decoration: none;
+}
+
+.table-majors-add {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #fceede;
+}
+
+.table-majors-add th,
+.table-majors-add td {
+  border: 1px solid #c2a680;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-majors-add thead {
+  background-color: #d7b28c;
+  font-weight: bold;
+}
+
+
+
+/* end the css dashboard-majors */
+
+/* start the css dashboard-groups */
+
+    .groups-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #fcebd3;
+      padding: 30px;
+      border: 1px solid #e2c9a3;
+      border-radius: 5px;
+    }
+
+    .groups-header {
+      background-color: #f9b233;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 15px 25px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .groups-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .groups-form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .groups-label {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .groups-select,
+    .groups-input {
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .groups-button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .groups-btn {
+      background-color: #f9b233;
+      border: none;
+      padding: 10px 25px;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      min-width: 100px;
+    }
+
+    .groups-btn:hover {
+      background-color: #e69a00;
+    }
+
+    .groups-details-title {
+      font-size: 18px;
+      color: green;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .groups-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+    }
+
+    .groups-table thead {
+      background-color: #d2a96c;
+    }
+
+    .groups-table th,
+    .groups-table td {
+      padding: 10px;
+      border: 1px solid #a98755;
+      text-align: left;
+    }
+
+    .groups-table tbody tr:nth-child(odd) {
+      background-color: #f9f1e5;
+    }
+
+
+
+/* end the css dashboard-groups */
+
+/* start css dashboard-experience */
+
+.container-experience-add {
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: #fce9d8;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.header-experience-add {
+  background-color: #fbb03b;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-section-experience-add {
+  margin-top: 20px;
+}
+
+.form-row-experience-add {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group-experience-add {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.form-group-experience-add label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group-experience-add select {
+  padding: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.buttons-experience-add {
+  margin-top: 20px;
+}
+
+.btn-add-experience-add,
+.btn-delete-experience-add,
+.btn-clear-experience-add {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #fbb03b;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.details-experience-add h3 a {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.table-experience-add {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #fceede;
+}
+
+.table-experience-add th,
+.table-experience-add td {
+  border: 1px solid #c2a680;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-experience-add thead {
+  background-color: #d7b28c;
+}
+
+
+/* end css dashboard-experience */
+
+/* start css dashboard-control-panel */
+
+.container-control-panel {
+  max-width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.header-control-panel {
+  width: 90%;
+  background-color: #fbb03b;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-section-control-panel {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.menu-column-control-panel {
+  text-align: center;
+}
+
+.menu-title-control-panel {
+  font-weight: bold;
+  border: 1px solid orange;
+  border-radius: 10px;
+  padding: 8px 16px;
+  background-color: #F4F4F4;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.margin-add-bottom {
+  margin-bottom: 120px;
+}
+
+.image-wrapper-control-panel {
+  margin: 10px 0;
+}
+
+.menu-image-control-panel {
+  width: 12px;
+  height: auto;
+}
+
+.menu-image-control-panel2 {
+  width: 80px;
+  height: auto;
+}
+
+.menu-list-control-panel {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item-control-panel {
+  display: flex;
+  border: 1px solid orange;
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  background-color: #f9f9f9;
+}
+
+.menu-item-control-panel a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  display: block;
+}
+
+
+/* end css dashboard-control-panel */
+
+/* start css dashboard job category */
+.container-job-category {
+  max-width: 960px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 0 15px;
+}
+
+.header-job-category {
+  background-color: #fbb03b;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+.header-job-category h2 {
+  color: white;
+  margin: 0;
+}
+
+.form-section-job-category,
+.search-section-job-category {
+  margin: 10px 0;
+}
+
+.input-job-category {
+  padding: 6px;
+  width: 300px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.btn-save-job-category,
+.btn-reset-job-category,
+.btn-search-job-category {
+  background-color: #fbb03b;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.divider-job-category {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #f4ae52;
+}
+
+.table-job-category {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff7e7;
+  border: 1px solid #eee;
+}
+
+.table-job-category th {
+  background-color: #fbb03b;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.table-job-category td {
+  padding: 10px;
+  border-top: 1px solid #f2dbb5;
+}
+
+.icon-job-category {
+  color: #1c88d0;
+  font-weight: bold;
+}
+
+.btn-edit-job-category,
+.btn-delete-job-category {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-edit-job-category {
+  background-image: url('https://img.icons8.com/ios/24/000000/edit--v1.png');
+}
+
+.btn-delete-job-category {
+  background-image: url('https://img.icons8.com/color/24/000000/delete-forever.png');
+}
+
+
+
+/* end css dashboard job category */
+
+/* start css the search cv */
+
+.container-search-cv {
+  max-width: 1100px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  background: #fff9f0;
+  padding: 10px;
+}
+
+.header-search-cv {
+  background: #fbb03b;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.header-search-cv h2 {
+  margin: 0;
+  color: #fff;
+}
+
+.form-grid-search-cv {
+  display: flex;
+  gap: 20px;
+}
+
+.column-left-search-cv,
+.column-right-search-cv {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin: 6px 0 3px;
+  font-size: 14px;
+}
+
+.select-search-cv,
+.input-search-cv {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.radio-group-search-cv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.tabs-search-cv {
+  margin-top: 15px;
+}
+
+.tab-btn-search-cv {
+  background: #e9e9ff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.buttons-section-search-cv {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.icon-btn-search-cv {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.icon-btn-search-cv.search {
+  background-image: url('https://img.icons8.com/ios/50/search--v1.png');
+}
+
+.icon-btn-search-cv.clear-search {
+  background-image: url('https://img.icons8.com/color/48/delete-sign.png');
+}
+
+.icon-btn-search-cv.clear-mark {
+  background-image: url('https://img.icons8.com/ios/50/delete-sign--v1.png');
+}
+
+.icon-btn-search-cv.info {
+  background-image: url('https://img.icons8.com/ios/50/info--v1.png');
+}
+
+.note-box-search-cv {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.table-search-cv {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.table-search-cv th,
+.table-search-cv td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+  background-color: #fff5e6;
+}
+
+.note-section-search-cv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.save-note-search-cv,
+.edit-cv-search-cv {
+  background: #eee;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+} 
+
+.scroll-container-search-cv {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.table-search-cv {
+  border-collapse: collapse;
+  min-width: 1200px; /* Ensures scrolling when content overflows */
+  width: 100%;
+}
+
+.table-search-cv td,
+.table-search-cv th {
+  border: 1px solid #ccc;
+  padding: 6px;
+  white-space: nowrap;
+  background-color: #fff5e6;
+  font-size: 13px;
+}
+
+
+/* end css the search cv */
+
+
+
+/* dashboard add user */
+
+
+ .container.add-user {
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    .header.add-user {
+      background-color: #febe5d;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .back-button.add-user {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    label.add-user {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    select.add-user,
+    input.add-user,
+    textarea.add-user {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    textarea.add-user {
+      height: 150px;
+      resize: vertical;
+    }
+
+    .checkbox-container.add-user {
+      margin: 10px 0;
+    }
+
+    .checkbox-container.add-user label.add-user {
+      display: inline;
+      font-weight: normal;
+    }
+
+    .buttons.add-user {
+      margin-top: 15px;
+    }
+
+    .buttons.add-user button.add-user {
+      background-color: #febe5d;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 30px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .buttons.add-user button.cancel.add-user {
+      background-color: #febe5d;
+    }
+
+/* end css dashboard add user */
+
+
+/* start the css dashboard job view jorden */
+
+   .main-container-job-view-jordan {
+      max-width: 1100px;
+      margin: auto;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      box-shadow: 0 0 8px #ccc;
+      padding: 20px;
+    }
+
+    .header-job-view-jordan {
+      background-color: #fbb03b;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .sub-header-job-view-jordan {
+      background-color: #fbb03b;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px;
+      color: black;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .success-message-job-view-jordan {
+      text-align: center;
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .search-filters-job-view-jordan {
+      margin: 20px 0;
+    }
+
+    .search-filters-job-view-jordan label {
+      font-weight: bold;
+      color: green;
+    }
+
+    .search-fields-job-view-jordan {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .search-fields-job-view-jordan input {
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .search-fields-job-view-jordan button {
+      padding: 7px 15px;
+      border: none;
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .results-table-job-view-jordan {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    .results-table-job-view-jordan th {
+      background-color: #fbb03b;
+      padding: 8px;
+      text-align: left;
+      color: #333;
+    }
+
+    .results-table-job-view-jordan td {
+      padding: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .results-table-job-view-jordan td a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .results-table-job-view-jordan td a.amend-job-view-jordan {
+      color: blue;
+    }
+
+    .results-table-job-view-jordan td a.done-job-view-jordan {
+      color: green;
+    }
+
+    .results-table-job-view-jordan td a.delete-job-view-jordan {
+      color: red;
+    }
+
+    .btn-delete-multiple-job-view-jordan {
+      margin-top: 10px;
+      background-color: orange;
+      color: white;
+      padding: 7px 15px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .results-table-job-view-jordan img {
+      width: 16px;
+      vertical-align: middle;
+    }
+
+
+/* end the css dashboard view jorden  */
+
+
+/* dashboard css job search list */
+
+
+ .client-box-list-search {
+      border: 1px solid #ccc;
+      background: #fff;
+      border-radius: 6px;
+      padding: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      overflow-x: auto;
+    }
+
+    .client-header-list-search {
+      background-color: #fdbb49;
+      padding: 10px 15px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .search-section-list-search {
+      padding: 15px 10px;
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .search-section-list-search label {
+      font-weight: bold;
+      color: green;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .search-section-list-search input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      width: 180px;
+    }
+
+    .search-section-list-search button {
+      padding: 7px 20px;
+      background: orange;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .table-section-list-search {
+      padding: 10px 0;
+    }
+
+    .table-list-search {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 1200px;
+    }
+
+    .table-list-search th,
+    .table-list-search td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .table-list-search th {
+      background: #eee;
+    }
+
+    .submit-button-list-search {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .submit-button-list-search button {
+      padding: 8px 20px;
+      background: orange;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .status-select-list-search {
+      width: 100px;
+    }
+
+
+
+/* end dashboard css job search list */
+
+
+/* add the dashboard add country */
+
+
+ .add-country {
+      font-family: Arial, sans-serif;
+    }
+
+    .container.add-country {
+      width: 80%;
+      margin: 40px auto;
+      background-color: #fff0dc;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .header.add-country {
+      background-color: #fbbf5f;
+      padding: 10px 15px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 6px 6px 0 0;
+      color: white;
+    }
+
+    .form-section.add-country {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .form-section.add-country label {
+      margin-right: 10px;
+    }
+
+    .form-section.add-country select,
+    .form-section.add-country input[type="text"] {
+      padding: 6px;
+      margin: 10px 10px 10px 0;
+      width: 220px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 5px #d3d3d3 inset;
+    }
+
+    .buttons.add-country {
+      margin-top: 10px;
+    }
+
+    .buttons.add-country button {
+      padding: 8px 20px;
+      margin-right: 10px;
+      background-color: #fbbf5f;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .buttons.add-country button:hover {
+      background-color: #ffa928;
+    }
+
+    .table-section.add-country {
+      margin-top: 30px;
+    }
+
+    .table-section.add-country label {
+      color: green;
+      font-weight: bold;
+      text-decoration: underline;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .table-section.add-country table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-section.add-country table th {
+      background-color: #d2ae7d;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .table-section.add-country table td {
+      background-color: #fff5e6;
+      padding: 8px;
+      border: 1px solid #d2ae7d;
+    }
+
+
+
+
+/* end the dashboard add country */
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .about-us-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-details {
+    max-width: 100%;
+  }
+
+  .about-header {
+    flex-direction: column;
+  }
+
+  .about-us-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-details {
+    max-width: 100%;
+  }
+
+  nav.gulf-nav {
+    flex-direction: column;
+  }
+  .gulf-buttons,
+  .gulf-filters {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gulf-buttons button,
+  .gulf-filters button {
+    width: 90%;
+  }
+
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+
+  .social-icons-img {
+    width: 200px !important;
+  } 
+  .logo-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo-text h2 {
+    font-size: 20px;
+  }
+  
+  .menu a {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .inner-main-banner {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .inner-main-banner-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .job-buttons {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .social-icons img {
+    width: 20px!important;
+    margin-right: 5px;
+  }
+
+}
