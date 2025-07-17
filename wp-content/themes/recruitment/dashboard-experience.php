@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $min = intval($_POST['min_experience'] ?? 0);
     $max = intval($_POST['max_experience'] ?? 0);
 
+    // ✅ ADD
     if (isset($_POST['add_experience'])) {
         if (!empty($selected_range)) {
             [$auto_min, $auto_max] = explode('-', $selected_range);
@@ -48,6 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    // ✅ DELETE
     if (isset($_POST['delete_experience'])) {
         if (!empty($selected_range)) {
             [$sel_min, $sel_max] = explode('-', $selected_range);
@@ -67,6 +69,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         } else {
             $_SESSION['error_message'] = 'Please select an experience range to delete.';
+        }
+
+        wp_redirect(get_permalink());
+        exit;
+    }
+
+    // ✅ UPDATE
+    if (isset($_POST['update_experience'])) {
+
+        if (!empty($selected_range)) {
+            [$old_min, $old_max] = explode('-', $selected_range);
+            $old_min = intval($old_min);
+            $old_max = intval($old_max);
+
+            // Check if trying to update to a range that already exists
+            $duplicate = $wpdb->get_row(
+                $wpdb->prepare("SELECT id FROM $table_name WHERE min_experience = %d AND max_experience = %d", $min, $max)
+            );
+
+            if ($duplicate) {
+                $_SESSION['error_message'] = 'Cannot update. The new experience range already exists.';
+            } else {
+                $updated = $wpdb->update(
+                    $table_name,
+                    ['min_experience' => $min, 'max_experience' => $max],
+                    ['min_experience' => $old_min, 'max_experience' => $old_max],
+                    ['%d', '%d'],
+                    ['%d', '%d']
+                );
+
+                if ($updated !== false) {
+                    $_SESSION['success_message'] = 'Experience range updated successfully.';
+                } else {
+                    $_SESSION['error_message'] = 'Experience range update failed.';
+                }
+            }
+        } else {
+            $_SESSION['error_message'] = 'Please select an experience range to update.';
         }
 
         wp_redirect(get_permalink());
@@ -128,6 +168,9 @@ get_header('dashboard');
           <button type="submit" name="add_experience" class="btn-add-experience-add">Add</button>
         </div>
         <div class="buttons-experience-add">
+          <button type="submit" name="update_experience" class="btn-add-experience-add">Update</button>
+        </div>
+        <div class="buttons-experience-add">
           <button type="submit" name="delete_experience" class="btn-add-experience-add">Delete</button>
         </div>
         <div class="buttons-experience-add">
@@ -160,6 +203,7 @@ get_header('dashboard');
 <script>
 document.getElementById('experience_range').addEventListener('change', function () {
   const val = this.value.split('-');
+  console.log("helkooooo",val);
   if (val.length === 2) {
     document.getElementById('min_experience').value = val[0];
     document.getElementById('max_experience').value = val[1];
